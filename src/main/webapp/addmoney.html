@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Infinity Bank | Adicionar</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<div class="principal">
+		<div class="content">
+			<div>
+				<form id="form-account-amount"  name="newaccount" class="form" action="money" method="POST">
+					<h1>Adicionar a conta</h1>
+					<a class="newaccount__btn bg-blue" href="/main">dashboard</a>
+					<div class="input">
+						<label class="hide" id="cidLabel" for="cid">id entre 1 e 10
+							caracteres</label>
+						<input id="cid" type="text" name="cid" hidden />
+					</div>
+					<div class="input">
+						<label id="camountLabel" for="camount">digite o valor</label>
+						<input type="text" name="camount" id="camount" placeholder="digite quanto deseja"/>
+					</div>
+		
+					<div class="input">
+						<button class="input__btn" type="submit">adicionar valor</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/valida.js"></script>
+</body>
+</html>
+>

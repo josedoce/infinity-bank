@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" 
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="jpa">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>infinitybank.model.Client</class>
+       	<class>infinitybank.model.Account</class>
+       
+        <properties>
+        	<!-- conexão jdbc ao banco de dados -->
+            <property name="javax.persistence.jdbc.driver"
+                value="com.mysql.jdbc.Driver"/><!-- Obrigatorio -->
+            <property name="javax.persistence.jdbc.url"
+                value="jdbc:mysql://localhost/infinitybank"/><!-- Obrigatorio -->
+            <property name="javax.persistence.jdbc.user"
+                value="root"/><!-- Obrigatorio -->
+            <property name="javax.persistence.jdbc.password"
+                value="gatomolhado"/><!-- Obrigatorio -->
+            
+            <!-- configurações do hibernate -->
+            <property name="hibernate.dialect"
+                value="org.hibernate.dialect.MySQL57Dialect"/> <!-- Obrigatorio -->
+            <property name="hibernate.show_sql" value="true"/> <!-- Opcional -->
+            <property name="hibernate.format_sql" value="true"/> <!-- Opcional -->
+            <!-- 
+            	hbm2ddl ativado, gerará os esquemas de tabela
+             	do banco de dados automaticamente com base na 
+             	classe(objeto).
+             	ATENÇÃO: Não é usado em produção.
+            -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- Opcional -->
+        </properties>
+    </persistence-unit>
+</persistence>
